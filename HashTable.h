@@ -21,6 +21,8 @@ typedef struct Bucket
 typedef struct Table
 {
 	bucket* theBucket;
+	float scaleFactor;
+	int numBuckets;
 }table;
 
 
@@ -37,8 +39,11 @@ void list_printVal(list* theList);
 void initialize_Bucket(bucket** theBucket);
 
 //table
-
-
+void initialize_Table(table** theTable, float sf);
+void table_changeFactor(table* theTable, float sf);
+void table_resize(table** theTable);
+void table_hash(table* theTable);
+int table_search(table* theTable, int val);	//char pointers l8ter
 
 
 
