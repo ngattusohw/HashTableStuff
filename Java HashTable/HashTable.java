@@ -51,7 +51,7 @@ public class HashTable<T>{
 	}
 
 	public int hash(T elem){
-		return elem.hashCode();
+		return Math.abs(elem.hashCode());
 	}
 
 	public void adjust(){
@@ -63,9 +63,9 @@ public class HashTable<T>{
 		for(int z=0;z<capacity;z++){
 			newTable[z] = new LinkedList<T>();
 		}
-
 		for(int x=0;x<prevCap;x++){
-			for(int y=0;y<table[x].getSize();y++){
+			int temp_size = table[x].getSize();
+			for(int y=0;y<temp_size;y++){
 				T holdElem = table[x].popFront();
 				int loc = hash(holdElem) % capacity;
 				newTable[loc].pushBack(holdElem);
