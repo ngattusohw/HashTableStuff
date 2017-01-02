@@ -100,11 +100,10 @@ public class LinkedList<T>{
 
 	public T popFront(){
 		if(size>0){
-			Node<T> temp = head;
+			T temp = head.getElement();
 			head = head.getNext();
 			decrement();
-			T test = (T)temp.getElement();
-			return test;
+			return temp;
 		}else{
 			return null;
 		}
@@ -113,14 +112,13 @@ public class LinkedList<T>{
 	public T popBack(){
 		if(size>0){
 			Node<T> temp = head;
-			Node<T> temp2 = tail;
+			T temp2 = tail.getElement();
 			for(int x=0;x<size-1;x++){
 				temp = temp.getNext();
 			}
 				tail = temp;
 				decrement();
-				T test = (T)temp2.getElement();
-				return test;
+				return temp2;
 		}else{
 			return null;
 		}

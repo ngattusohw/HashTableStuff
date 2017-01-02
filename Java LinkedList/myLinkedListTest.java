@@ -10,6 +10,18 @@ public class myLinkedListTest{
 		list.printElements();
 		System.out.println(list.getSize());
 
+		list.pushBack("Asswipe");
+		list.printElements();
+		System.out.println(list.getSize());
+
+		list.popFront();
+		list.printElements();
+		System.out.println(list.getSize());
+
+		list.popBack();
+		list.printElements();
+		System.out.println(list.getSize());
+
 	}
 
 }
