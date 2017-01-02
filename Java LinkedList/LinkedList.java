@@ -34,8 +34,8 @@ public class LinkedList<T>{
 		}
 	}
 
-	private Node<T> head=null;
-	private Node<T> tail=null;
+	private Node<T> head= null;
+	private Node<T> tail= null;
 	private int size=0;
 
 	public LinkedList(){
@@ -62,24 +62,23 @@ public class LinkedList<T>{
 	}
 
 	public void pushFront(T elem){
+		head = new Node<>(elem,head);
 		if(size==0){
-			head = new Node<>(elem,null);
-			tail = head;
-		}else{
-			Node<T> temp = head;
-			head = new Node<>(elem,temp);
+			tail = head; 
 		}
 		increment();
 	}
 
 	public void pushBack(T elem){
+		Node<T> temp = new Node<>(elem,null);
+
 		if(size==0){
-			pushFront(elem);
+			head = temp;
 		}else{
-			Node<T> temp = tail;
-			tail = new Node<>(elem,null);
-			temp.setNext(tail);
+			tail.setNext(temp);
 		}
+
+		tail = temp;
 		increment();
 	}
 
@@ -131,7 +130,7 @@ public class LinkedList<T>{
 		Node<T> temp = head;
 		for(int x=0;x<size;x++){
 			System.out.print(temp.getElement() + " ");
-			temp.getNext();
+			temp = temp.getNext();
 		}
 		System.out.println("");
 	}
