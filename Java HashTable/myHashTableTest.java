@@ -1,6 +1,4 @@
 
-
-
 public class myHashTableTest{
 	public static void main(String[] args) {
 		HashTable<String> tab = new HashTable<String>(2);
@@ -20,22 +18,40 @@ public class myHashTableTest{
 							tab.getCapacity());
 		
 
-		// tab.insert("First");
-		// System.out.println(tab.getSize());
-		// System.out.println(tab.getCapacity());
+		tab.insert("First");
+		System.out.println(tab.getSize());
+		System.out.println(tab.getCapacity());
 
-		// tab.insert("Second");
-		// System.out.println(tab.getSize());
-		// System.out.println(tab.getCapacity());
+		tab.insert("Second");
+		System.out.println(tab.getSize());
+		System.out.println(tab.getCapacity());
 
-		// tab.insert("Third");
-		// System.out.println(tab.getSize());
-		// System.out.println(tab.getCapacity());
+		tab.insert("Third");
+		System.out.println(tab.getSize());
+		System.out.println(tab.getCapacity());
+
+		tab.insert("wow");
+		tab.insert("this");
+		tab.insert("sucks");
+		tab.insert("weed");
+		tab.insert("keed");
+		tab.insert("feed");
 
 
-		// System.out.println(tab.search("First"));
-		// System.out.println(tab.search("Second"));
-		// System.out.println(tab.search("Third"));
-		// System.out.println(tab.search("damn"));
+		System.out.println(tab.search("First"));
+		System.out.println(tab.search("Second"));
+		System.out.println(tab.search("Third"));
+		System.out.println(tab.search("damn"));
+		System.out.println(tab.search("wow"));
+		System.out.println(tab.search("this"));
+		System.out.println(tab.search("sucks"));
+		System.out.println(tab.search("weed"));
+		System.out.println(tab.search("keed"));
+		System.out.println(tab.search("feed"));
+		System.out.println(tab.getSize());
 	}
 }
+
+
+
+
