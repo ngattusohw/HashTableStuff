@@ -4,7 +4,7 @@ public class myHashTableTest{
 		HashTable<String> tab = new HashTable<String>(2);
 		System.out.println("Size: " + tab.getSize() + " Capacity: " +
 							tab.getCapacity());
-		tab.insert("damn");
+		tab.insert("zero");
 		System.out.println("Size: " + tab.getSize() + " Capacity: " +
 							tab.getCapacity());
 		tab.insert("first");
@@ -41,7 +41,7 @@ public class myHashTableTest{
 		System.out.println(tab.search("First"));
 		System.out.println(tab.search("Second"));
 		System.out.println(tab.search("Third"));
-		System.out.println(tab.search("damn"));
+		System.out.println(tab.search("zero"));
 		System.out.println(tab.search("wow"));
 		System.out.println(tab.search("this"));
 		System.out.println(tab.search("sucks"));
